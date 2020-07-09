@@ -7,7 +7,6 @@ export const createConsoleReadStream: () => Observable<string> = () => {
       input: process.stdin,
       output: process.stdout,
     });
-    console.log("rl");
     rl.on("line", (input) => {
       subscriber.next(input);
     });
